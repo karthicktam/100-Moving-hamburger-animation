@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 135px;
+  width: 350px;
+  position: relative;
+  box-shadow: 0 19px 38px rgba(255, 153, 153, 0.2),
+    0 15px 12px rgba(255, 153, 153, 0.1);
+}
+
+.menu {
+  cursor: pointer;
+  top: 45px;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+}
+
+.menu.left {
+  left: 45px;
+}
+
+.menu.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu.right {
+  left: calc(100% - 90px);
+}
+
+.line {
+  background-color: #ddd;
+  border-radius: 2px;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+}
+
+.line.short {
+  width: 80%;
+}
+
+.menu {
+  transition: all 0.4s cubic-bezier(0.65, -0.3, 0.5, 1.25);
+}
+
+.menu.active .line {
+  background-color: darksalmon;
+  transition: all 0.4s cubic-bezier(0.65, -0.3, 0.5, 1.25);
+}
+
+.line:nth-of-type(2) {
+  top: 10px;
+}
+
+.line:nth-of-type(3) {
+  top: 20px;
+}
+
+.line:nth-of-type(4) {
+  top: 30px;
+}
+
+.line:nth-of-type(5) {
+  top: 40px;
+}
+
+.menu.center .line {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.menu.right .line {
+  left: 100%;
+  transform: translate(-100%);
+}
